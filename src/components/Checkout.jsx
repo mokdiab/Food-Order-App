@@ -32,7 +32,7 @@ export default function Checkout() {
     city: Yup.string().required("City is required"),
   });
   const { data, isLoading, error, sendRequest, clearData } = useHttp(
-    "http://localhost:3000/orders",
+    "https://food-app-backend-e5cj.onrender.com/orders",
     requestConfig
   );
   const handleSubmit = (values, actions) => {
@@ -58,16 +58,14 @@ export default function Checkout() {
   };
   let actions = (isSubmitting) => {
     return (
-      <>
-        <p className="modal-actions">
-          <Button type="button" onClick={handleHideCheckout} textOnly>
-            Cancel
-          </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            Submit order
-          </Button>
-        </p>
-      </>
+      <p className="modal-actions">
+        <Button type="button" onClick={handleHideCheckout} textOnly>
+          Cancel
+        </Button>
+        <Button type="submit" disabled={isSubmitting}>
+          Submit order
+        </Button>
+      </p>
     );
   };
 

@@ -8,7 +8,7 @@ export default function Meals() {
     data: meals,
     isLoading,
     error,
-  } = useHttp("http://localhost:3000/meals", config, []);
+  } = useHttp("https://food-app-backend-e5cj.onrender.com/meals", config, []);
   if (isLoading)
     return (
       <div className="center">

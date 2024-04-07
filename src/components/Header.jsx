@@ -1,8 +1,8 @@
-import { useRef, useContext } from "react";
+import { useContext } from "react";
 import { UserProgressContext } from "../store/userProgressContext.jsx";
 
 import { CartContext } from "../store/shopping-cart-context.jsx";
-import CartModal from "./Modal.jsx";
+
 import Button from "./UI/Button.jsx";
 export default function Header() {
   const userProgressCtx = useContext(UserProgressContext);

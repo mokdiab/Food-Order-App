@@ -10,7 +10,10 @@ export default function MealItem({ meal }) {
   return (
     <li className="meal-item">
       <article>
-        <img src={`http://localhost:3000/${meal.image}`} alt={meal.title} />
+        <img
+          src={`https://food-app-backend-e5cj.onrender.com/${meal.image}`}
+          alt={meal.title}
+        />
         <div>
           <h3 className="">{meal.name}</h3>
           <p className="meal-item-price">{currencyFormatter(meal.price)}</p>
